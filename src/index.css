@@ -1,0 +1,31 @@
+/* Небольшие дополнения поверх дефолтного Bootstrap */
+
+/* Фиксируем высоту обложек в карточках, чтобы сетка не прыгала */
+.book-card__cover {
+  height: 220px;
+  width: 100%;
+  object-fit: contain;
+  background-color: var(--bs-secondary-bg);
+}
+
+.book-details__cover {
+  max-height: 420px;
+  width: 100%;
+  object-fit: contain;
+  background-color: var(--bs-secondary-bg);
+}
+
+/* Описание книги — сохраняем переводы строк */
+.book-details__description {
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+/* Обрезаем длинные заголовки и авторов в карточках */
+.book-card__cover + .card-body .card-title,
+.book-card .card-subtitle {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
